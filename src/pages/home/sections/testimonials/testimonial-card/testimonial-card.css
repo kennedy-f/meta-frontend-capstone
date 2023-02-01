@@ -1,0 +1,23 @@
+.testimonial-card {
+  width: 250px;
+  height: 360px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  border-width: 0;
+  border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  padding: 16px;
+  gap: 5px;
+  box-shadow: rgb(0 0 0 / 8%) -1px 6px 12px 6px;
+}
+
+.testimony {
+  display: -webkit-box;
+  max-width: 200px;
+  -webkit-line-clamp: 13;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
