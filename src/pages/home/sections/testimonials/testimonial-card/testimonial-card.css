@@ -15,6 +15,9 @@
 }
 
 .testimony {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
   display: -webkit-box;
   max-width: 200px;
   -webkit-line-clamp: 13;

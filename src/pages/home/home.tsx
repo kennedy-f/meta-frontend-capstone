@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  AboutSection,
   HeroSection,
   TestimonialsSection,
   WeekSpecialsSection,
@@ -11,6 +12,7 @@ export function Home() {
       <HeroSection />
       <WeekSpecialsSection />
       <TestimonialsSection />
+      <AboutSection />
     </>
   );
 }
