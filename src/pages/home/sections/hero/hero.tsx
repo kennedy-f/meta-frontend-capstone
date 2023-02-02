@@ -6,12 +6,12 @@ export function HeroSection() {
     <div className={"container-xlg about-container bg-green"}>
       <article className={"container"}>
         <div className={"about"}>
-          <h1> Little lemon </h1>
+          <h1 className={"subtitle"}> Little lemon </h1>
           <h2> Chicago </h2>
-          <span>
+          <p className={"content"}>
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist
-          </span>
+          </p>
           <Button style={{ marginTop: 10 }}>Reserve a Table</Button>
         </div>
         <div className={"about-2"}>

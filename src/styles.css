@@ -76,7 +76,7 @@ header ul li a {
 
 .about-container {
   background: var(--bg-green);
-  height: 350px;
+  height: 400px;
 }
 
 .container {
@@ -98,7 +98,8 @@ main h2 {
 .about {
   display: flex;
   flex-direction: column;
-  width: 28%;
+  width: 30%;
+  padding-top: 30px;
 }
 
 .about span {
@@ -114,6 +115,7 @@ main h2 {
 
 .subtitle {
   font-size: 40pt;
+  margin: 0;
 }
 
 .content {
@@ -138,4 +140,8 @@ main h2 {
 
 h1 {
   font-size: 40px;
+}
+
+.radius {
+  border-radius: 16px;
 }
