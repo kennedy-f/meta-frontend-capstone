@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+import { UISelect } from "../../../components/inputs";
+import { TextField } from "../../../components/text-field";
+
 import "./form.style.css";
+import "../../../components/buttom/button.style.css";
 
 export function BookingForm() {
   const [values, setValues] = useState({
@@ -21,14 +25,16 @@ export function BookingForm() {
   return (
     <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
       <label htmlFor="res-date">Choose date</label>
-      <input
+      <TextField placeholder={"text"} label={"Teste"} />
+      <TextField
+        label={"data"}
         type="date"
         id="res-date"
         value={values.date}
         onChange={handleChange("date")}
       />
       <label htmlFor="res-time">Choose time</label>
-      <select
+      <UISelect
         id="res-time"
         value={values.resTime}
         onChange={handleChange("resTime")}
@@ -39,9 +45,9 @@ export function BookingForm() {
         <option>20:00</option>
         <option>21:00</option>
         <option>22:00</option>
-      </select>
-      <label htmlFor="guests">Number of guests</label>
-      <input
+      </UISelect>
+      <TextField
+        label={"Number of guests"}
         type="number"
         placeholder="1"
         min="1"
@@ -59,7 +65,11 @@ export function BookingForm() {
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>
-      <input type="submit" value="Make Your reservation" />
+      <input
+        type="submit"
+        className={"button radius"}
+        value="Make Your reservation"
+      />
     </form>
   );
 }

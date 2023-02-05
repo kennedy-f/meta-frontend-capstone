@@ -3,8 +3,8 @@
   --bg-green: #495E57;
   --secondary: #EE9972;
   --secondary-white: #FBDABB;
-  --text-light: #EDEFEE;
-  --text-dark: #333;
+  --highlight-light: #EDEFEE;
+  --highlight-dark: #333;
   --font-regular: 'Karla', sans-serif;
   --font-medium: 'Markazi Text', sans-serif
 }
@@ -80,7 +80,7 @@ header ul li a {
 }
 
 .container {
-  width: 1000px;
+  width: 1000px!important;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -144,4 +144,37 @@ h1 {
 
 .radius {
   border-radius: 16px;
+}
+
+footer {
+  height: 400px;
+  padding: 2em 0 2em 0 !important;
+  background: var(--highlight-light);
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  gap: 5px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+
+.column {
+  flex-direction: column;
+}
+
+footer ul li {
+  list-style: none;
+  color: #868e96;
+}
+
+footer ul {
+  padding: 0;
+  gap: 0.5em;
+  display: flex;
+  flex-direction: column;
 }

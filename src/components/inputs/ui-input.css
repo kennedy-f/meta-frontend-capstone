@@ -1,0 +1,20 @@
+.input {
+  width: max-content;
+
+  border-radius: 16px;
+  border-width: 1px;
+  padding: 1em;
+  font-size: 14pt;
+  transition: all ease-in-out 150ms;
+}
+
+.input:focus {
+  border: 2px solid var(--bg-green)!important;
+  outline: var(--bg-green)!important;
+}
+
+.input:focus-visible {
+  border: 2px solid var(--bg-green)!important;
+  outline: var(--bg-green)!important;
+
+}

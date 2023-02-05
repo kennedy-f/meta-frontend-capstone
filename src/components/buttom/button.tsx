@@ -3,9 +3,8 @@ import "./button.style.css";
 
 export function Button({ children, ...props }: ButtonHTMLAttributes<any>) {
   return (
-    <button {...props} className={"radius"}>
-      {" "}
-      {children}{" "}
+    <button {...props} className={"radius, button"}>
+      {children}
     </button>
   );
 }
