@@ -4,7 +4,7 @@ import { Specials } from "../../../../components/specials/specials";
 
 export function WeekSpecialsSection() {
   return (
-    <Container>
+    <Container maxWidth={"lg"} sx={{ paddingY: 2 }}>
       <Grid item container>
         <div
           style={{
@@ -18,7 +18,7 @@ export function WeekSpecialsSection() {
           </h2>
           <Button> Online Menu </Button>
         </div>
-        <Grid container gap={3} justifyContent={"center"}>
+        <Grid container>
           <Specials />
           <Specials />
           <Specials />

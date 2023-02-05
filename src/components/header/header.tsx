@@ -6,8 +6,8 @@ export function Header() {
   return (
     <header>
       <Container maxWidth={"lg"}>
-        <Grid container alignItems={"center"}>
-          <Grid item md={4}>
+        <Grid container xs={12}>
+          <Grid item md={3}>
             <img alt={"little lemon logo "} src={"/imgs/Logo .svg"} />
           </Grid>
           <Grid item md={8}>

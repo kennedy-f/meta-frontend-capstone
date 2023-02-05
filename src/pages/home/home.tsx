@@ -8,11 +8,11 @@ import {
 
 export function Home() {
   return (
-    <>
+    <main>
       <HeroSection />
       <WeekSpecialsSection />
       <TestimonialsSection />
       <AboutSection />
-    </>
+    </main>
   );
 }

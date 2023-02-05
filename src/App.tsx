@@ -11,7 +11,7 @@ function App() {
       <CssBaseline />
       <Header />
       <RootNavigator />
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }
