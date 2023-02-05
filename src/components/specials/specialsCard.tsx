@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
 
-export function Specials() {
+export function SpecialsCard() {
   return (
     <Grid
       item
