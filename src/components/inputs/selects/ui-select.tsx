@@ -1,15 +1,24 @@
 import React from "react";
 import "../ui-input.css";
+import { LabelProps, UILabel } from "../label";
 
-export type UISelectProps = React.DetailedHTMLProps<
+export type SelectProps = React.DetailedHTMLProps<
   React.SelectHTMLAttributes<HTMLSelectElement>,
   HTMLSelectElement
 >;
 
-export function UISelect({ children, ...props }: UISelectProps) {
+export interface UISelectProps extends SelectProps {
+  label: React.ReactNode;
+  labelProps?: LabelProps;
+}
+
+export function UISelect({ children, label, ...props }: UISelectProps) {
   return (
-    <select className={"input"} {...props}>
-      {children}
-    </select>
+    <>
+      <UILabel>{label}</UILabel>
+      <select className={"input"} {...props}>
+        {children}
+      </select>
+    </>
   );
 }

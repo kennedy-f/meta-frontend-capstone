@@ -35,6 +35,7 @@ export function BookingForm() {
       />
       <label htmlFor="res-time">Choose time</label>
       <UISelect
+        label={"time"}
         id="res-time"
         value={values.resTime}
         onChange={handleChange("resTime")}
@@ -57,14 +58,17 @@ export function BookingForm() {
         onChange={handleChange("guests")}
       />
       <label htmlFor="occasion">Occasion</label>
-      <select
+      <UISelect
         id="occasion"
         value={values.occasion}
+        label={"occasion"}
+        placeholder={"Occasion"}
         onChange={handleChange("occasion")}
       >
+        <option> </option>
         <option>Birthday</option>
         <option>Anniversary</option>
-      </select>
+      </UISelect>
       <input
         type="submit"
         className={"button radius"}

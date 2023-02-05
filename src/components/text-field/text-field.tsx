@@ -1,5 +1,6 @@
 import React from "react";
 import { InputTypeProps, UIInput } from "../inputs";
+import { UILabel } from "../inputs/label";
 
 interface TextFieldProps extends InputTypeProps {
   label: string;
@@ -8,9 +9,9 @@ interface TextFieldProps extends InputTypeProps {
 export function TextField({ label, ...props }: TextFieldProps) {
   return (
     <>
-      <label htmlFor={props.id} style={{ color: "black" }}>
+      <UILabel htmlFor={props.id} style={{ color: "black" }}>
         {label}
-      </label>
+      </UILabel>
       <UIInput {...props} />
     </>
   );
