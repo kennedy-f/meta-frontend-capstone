@@ -1,5 +1,5 @@
 import { Autocomplete, Button, Grid, TextField } from "@mui/material";
-import { DatePicker } from "@mui/x-date-pickers";
+import { DatePicker, TimePicker } from "@mui/x-date-pickers";
 import { useFormik } from "formik";
 import React, { useState } from "react";
 
@@ -8,22 +8,6 @@ import { BookingValidation } from "./booking.validation";
 const hours = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 
 export function BookingForm() {
-  const [values, setValues] = useState({
-    date: "",
-    resTime: "",
-    guests: 0,
-    occasion: "",
-  });
-
-  const handleChange =
-    (name: keyof typeof values) =>
-    (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-      const { currentTarget } = event;
-
-      const { value } = currentTarget;
-      setValues({ ...values, [name]: value });
-    };
-
   const { getFieldProps, handleSubmit, errors, touched } = useFormik({
     initialValues: {
       date: new Date(),
@@ -44,16 +28,23 @@ export function BookingForm() {
           <DatePicker
             label={"data"}
             {...getFieldProps("date")}
-            renderInput={(params) => <TextField {...params} fullWidth />}
+            // helperText={touched.date && errors.date}
+            renderInput={(params) => (
+              <TextField
+                error={touched.date && !!errors.date}
+                helperText={touched.date && String(errors.date)}
+                {...params}
+                fullWidth
+              />
+            )}
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <Autocomplete
-            id="res-time"
-            options={hours}
-            value={values.resTime}
-            fullWidth
-            renderInput={(props) => <TextField {...props} label={"time"} />}
+          <TimePicker
+            {...getFieldProps("time")}
+            renderInput={(props) => (
+              <TextField {...props} label={"time"} fullWidth />
+            )}
           />
         </Grid>
         <Grid item xs={12} md={6}>

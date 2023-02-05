@@ -5,7 +5,18 @@ export function HeroSection() {
   return (
     <Box
       className={"container-xlg bg-green"}
-      sx={{ height: "fit-content", background: "var(--bg-green)", paddingY: 2 }}
+      sx={{
+        background: "var(--bg-green)",
+        height: {
+          md: 400,
+          xs: "fit-content",
+        },
+        marginBottom: {
+          md: 6,
+          xs: 0,
+        },
+        paddingY: 2,
+      }}
     >
       <Container maxWidth={"lg"}>
         <Grid container>
@@ -18,7 +29,9 @@ export function HeroSection() {
                   We are a family owned Mediterranean restaurant, focused on
                   traditional recipes served with a modern twist
                 </p>
-                <Button>Reserve a Table</Button>
+                <Button color={"secondary"} variant={"contained"}>
+                  Reserve a Table
+                </Button>
               </div>
             </article>
           </Grid>
