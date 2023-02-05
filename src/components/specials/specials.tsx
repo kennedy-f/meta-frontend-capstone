@@ -1,8 +1,19 @@
+import { Grid } from "@mui/material";
 import React from "react";
 
 export function Specials() {
   return (
-    <div style={{ width: "30%", background: "#e4e7e5" }}>
+    <Grid
+      item
+      style={{
+        width: "30%",
+        background: "#e4e7e5",
+        height: "fit-content",
+        borderRadius: "15px 15px 0 0",
+      }}
+      xs={12}
+      md={3}
+    >
       <img
         src={"/imgs/restauranfood.jpg"}
         alt={"greek salad"}
@@ -26,6 +37,6 @@ export function Specials() {
           Order a delivery
         </a>
       </div>
-    </div>
+    </Grid>
   );
 }

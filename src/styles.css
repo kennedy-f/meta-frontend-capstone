@@ -34,12 +34,6 @@ body > * {
 }
 
 /* header */
-header {
-  display: flex;
-  width: 1000px;
-  justify-content: space-between;
-  align-items: center;
-}
 
 header img {
   width: 200px;
@@ -95,23 +89,6 @@ main h2 {
   margin-top: 0;
 }
 
-.about {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  padding-top: 30px;
-}
-
-.about span {
-  font-size: 24px;
-}
-
-.about-2 img {
-  margin-top: 2em;
-  border-radius: 20px;
-  width: 400px;
-  height: 450px;
-}
 
 .subtitle {
   font-size: 40pt;

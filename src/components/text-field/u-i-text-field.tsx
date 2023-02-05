@@ -6,7 +6,7 @@ interface TextFieldProps extends InputTypeProps {
   label: string;
 }
 
-export function TextField({ label, ...props }: TextFieldProps) {
+export function UITextField({ label, ...props }: TextFieldProps) {
   return (
     <>
       <UILabel htmlFor={props.id} style={{ color: "black" }}>
