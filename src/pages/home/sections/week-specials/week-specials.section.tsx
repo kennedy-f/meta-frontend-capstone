@@ -12,14 +12,25 @@ export function WeekSpecialsSection() {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Grid item>
+          <Grid item xs={12} sm={8} md={6}>
             <h2
               style={{ color: "black", fontSize: 44, padding: 0, margin: 10 }}
             >
               This weeks specials!
             </h2>
           </Grid>
-          <Grid item>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            md={2}
+            sx={{
+              marginBottom: {
+                xs: 2,
+                md: 0,
+              },
+            }}
+          >
             <Button variant={"contained"} color={"secondary"} fullWidth>
               Online Menu
             </Button>

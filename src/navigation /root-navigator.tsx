@@ -7,7 +7,10 @@ export function RootNavigator() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} path={"/"} />
-        <Route element={<BookingForm />} path={"/booking"} />
+        <Route
+          element={<BookingForm onSubmit={(values) => console.log(values)} />}
+          path={"/booking"}
+        />
       </Routes>
     </BrowserRouter>
   );

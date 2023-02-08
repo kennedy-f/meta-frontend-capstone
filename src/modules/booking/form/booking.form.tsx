@@ -1,24 +1,38 @@
 import { Autocomplete, Button, Grid, TextField } from "@mui/material";
 import { DatePicker, TimePicker } from "@mui/x-date-pickers";
 import { useFormik } from "formik";
-import React, { useState } from "react";
+import React from "react";
 
 import { BookingValidation } from "./booking.validation";
 
-const hours = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+export interface Booking {
+  date: Date;
+  numberOfGuests: number;
+  occasion: string;
+  time: Date;
+}
 
-export function BookingForm() {
-  const { getFieldProps, handleSubmit, errors, touched } = useFormik({
+export function BookingForm({
+  onSubmit,
+}: {
+  onSubmit: (data: Booking) => void;
+}) {
+  const {
+    getFieldProps,
+    handleSubmit,
+    errors,
+    touched,
+    setFieldValue,
+    values,
+  } = useFormik({
     initialValues: {
       date: new Date(),
-      numberOfDinners: 0,
-      occasion: null,
-      time: null,
+      numberOfGuests: 0,
+      occasion: "",
+      time: new Date(),
     },
     validationSchema: BookingValidation,
-    onSubmit: () => {
-      //
-    },
+    onSubmit,
   });
 
   return (
@@ -26,13 +40,14 @@ export function BookingForm() {
       <Grid container gap={2}>
         <Grid item xs={12} md={6}>
           <DatePicker
-            label={"data"}
-            {...getFieldProps("date")}
-            // helperText={touched.date && errors.date}
+            label={"date"}
+            onChange={(dateValue) => setFieldValue("date", dateValue)}
+            value={values.date}
+            minDate={new Date()}
             renderInput={(params) => (
               <TextField
+                name={"date"}
                 error={touched.date && !!errors.date}
-                helperText={touched.date && String(errors.date)}
                 {...params}
                 fullWidth
               />
@@ -41,7 +56,9 @@ export function BookingForm() {
         </Grid>
         <Grid item xs={12} md={6}>
           <TimePicker
-            {...getFieldProps("time")}
+            label={"time"}
+            onChange={(timeValue) => setFieldValue("time", timeValue)}
+            value={values.time}
             renderInput={(props) => (
               <TextField {...props} label={"time"} fullWidth />
             )}
@@ -52,19 +69,26 @@ export function BookingForm() {
             label={"Number of guests"}
             type={"number"}
             fullWidth
-            {...getFieldProps("numberOfDinners")}
+            {...getFieldProps("numberOfGuests")}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <Autocomplete
-            renderInput={(params) => <TextField {...params} />}
-            {...getFieldProps("occasion")}
+            value={values.occasion}
+            renderInput={(params) => (
+              <TextField {...params} label={"Occasion"} />
+            )}
+            onChange={(_, value) => setFieldValue("occasion", String(value))}
             fullWidth
             options={["Birthday", "Anniversary"]}
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <Button variant={"contained"} type={"submit"}>
+          <Button
+            variant={"contained"}
+            type={"submit"}
+            data-testid={"booking-submit-button"}
+          >
             Make your reservation
           </Button>
         </Grid>

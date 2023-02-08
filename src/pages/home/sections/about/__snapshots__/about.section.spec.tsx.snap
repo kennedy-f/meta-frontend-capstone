@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`about.section Should render 1`] = `
+<div>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-ot339a-MuiContainer-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+        >
+          <article>
+            <h3
+              style="font-size: 40px; margin-bottom: 0px; color: rgb(0, 0, 0);"
+            >
+              Little Lemon
+            </h3>
+            <h4
+              style="font-size: 20px; margin-top: 0px;"
+            >
+               Chicago 
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum esse reiciendis reprehenderit? Dolore dolorem doloribus dolorum excepturi itaque maxime modi non nulla possimus, quia quisquam saepe sed, veritatis voluptas voluptatum.
+            </p>
+          </article>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+        >
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="food"
+              height="250"
+              src="/imgs/Mario and Adrian b.jpg"
+              style="position: absolute; top: 130px; right: -15px; border-radius: 20px;"
+              width="350"
+            />
+            <img
+              alt="food"
+              height="250"
+              src="/imgs/Mario and Adrian A.jpg"
+              style="top: 30px; position: absolute; border-radius: 20px; left: 0px;"
+              width="350"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

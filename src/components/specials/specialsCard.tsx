@@ -8,8 +8,10 @@ export function SpecialsCard() {
       sx={{
         paddingX: 1,
         height: "fit-content",
+        paddingY: 1,
       }}
       xs={12}
+      sm={6}
       md={4}
     >
       <Box sx={{ background: "#e4e7e5", borderRadius: "15px 15px 0 0" }}>

@@ -5,7 +5,7 @@ const navOptions: { label: string; href: string }[] = [
   { label: "home", href: "/" },
   { label: "about", href: "/" },
   { label: "menu", href: "" },
-  { label: "reservations", href: "/" },
+  { label: "reservations", href: "/booking" },
   { label: "Order Online", href: "/" },
   { label: "login", href: "/" },
 ];

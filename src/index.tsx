@@ -1,9 +1,8 @@
 import { ThemeProvider } from "@mui/material";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { UILocalizationProvider } from "./contexts/localization";
 import reportWebVitals from "./reportWebVitals";
 import { theme } from "./theme";
 
@@ -12,11 +11,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
+    <UILocalizationProvider>
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
-    </LocalizationProvider>
+    </UILocalizationProvider>
   </React.StrictMode>
 );
 

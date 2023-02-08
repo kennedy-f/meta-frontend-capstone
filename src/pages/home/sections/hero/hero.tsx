@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
 export function HeroSection() {
@@ -22,17 +22,19 @@ export function HeroSection() {
         <Grid container>
           <Grid item xs={12} md={6}>
             <article>
-              <div>
-                <h1> Little lemon </h1>
-                <h2> Chicago </h2>
-                <p>
-                  We are a family owned Mediterranean restaurant, focused on
-                  traditional recipes served with a modern twist
-                </p>
-                <Button color={"secondary"} variant={"contained"}>
-                  Reserve a Table
-                </Button>
-              </div>
+              <Typography variant={"h1"} color={"secondary"}>
+                Little lemon
+              </Typography>
+              <Typography variant={"h2"} color={"white"} mb={2}>
+                Chicago
+              </Typography>
+              <Typography variant={"body1"} color={"white"} mb={2}>
+                We are a family owned Mediterranean restaurant, focused on
+                traditional recipes served with a modern twist
+              </Typography>
+              <Button color={"secondary"} variant={"contained"}>
+                Reserve a Table
+              </Button>
             </article>
           </Grid>
           <Grid
