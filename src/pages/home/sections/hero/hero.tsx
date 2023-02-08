@@ -1,4 +1,5 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import React from "react";
 
 export function HeroSection() {
@@ -20,7 +21,19 @@ export function HeroSection() {
     >
       <Container maxWidth={"lg"}>
         <Grid container>
-          <Grid item xs={12} md={6}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            alignItems={"center"}
+            container
+            sx={{
+              height: {
+                md: 400,
+                xs: "fit-content",
+              },
+            }}
+          >
             <article>
               <Typography variant={"h1"} color={"secondary"}>
                 Little lemon
@@ -32,7 +45,12 @@ export function HeroSection() {
                 We are a family owned Mediterranean restaurant, focused on
                 traditional recipes served with a modern twist
               </Typography>
-              <Button color={"secondary"} variant={"contained"}>
+              <Button
+                color={"secondary"}
+                variant={"contained"}
+                component={Link}
+                to={"/booking"}
+              >
                 Reserve a Table
               </Button>
             </article>
@@ -49,10 +67,12 @@ export function HeroSection() {
               src={"/imgs/restauranfood.jpg"}
               alt={"restaurant food"}
               width={500}
+              loading={"lazy"}
               style={{
                 borderRadius: "16px",
                 width: "400px",
                 height: "450px",
+                position: "absolute",
               }}
             />
           </Grid>

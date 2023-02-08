@@ -9,4 +9,15 @@ export const theme = createTheme({
       main: "#F4CE14",
     },
   },
+  typography: {
+    h1: {
+      fontSize: "40pt",
+    },
+    h2: {
+      fontSize: "28pt",
+    },
+    h3: {
+      fontSize: "24pt",
+    },
+  },
 });

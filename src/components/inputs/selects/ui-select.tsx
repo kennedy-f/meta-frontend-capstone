@@ -1,5 +1,4 @@
 import React from "react";
-import "../ui-input.css";
 import { LabelProps, UILabel } from "../label";
 
 export type SelectProps = React.DetailedHTMLProps<

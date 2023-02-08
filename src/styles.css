@@ -20,9 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-body > * {
-  gap: 2em;
-}
 
 #root {
   display: flex;
@@ -32,9 +29,6 @@ body > * {
   width: 100vw;
   /*color: #fff;*/
 }
-
-
-
 
 .container-xlg {
   width: 100vw;

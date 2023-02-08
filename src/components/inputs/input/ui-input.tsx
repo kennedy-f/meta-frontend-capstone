@@ -1,5 +1,4 @@
 import React from "react";
-import "../ui-input.css";
 
 export type InputTypeProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,

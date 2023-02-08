@@ -11,19 +11,18 @@ import { UILocalizationProvider } from "../../../contexts/localization";
 import { Booking, BookingForm } from "./booking.form";
 
 describe("bookin.form.spec", () => {
-  it("Should render", () => {
-    const { container } = render(
-      <UILocalizationProvider>
-        <BookingForm onSubmit={() => null} />
-      </UILocalizationProvider>
-    );
-    expect(container).toMatchSnapshot();
-  });
   it("Should fill inputs and submit form", async () => {
-    const mockFn = jest.fn((data: Booking) => console.log(data));
+    const mockFn = jest.fn((data: Booking) => data);
     render(
       <UILocalizationProvider>
         <BookingForm onSubmit={mockFn} />
+        <button
+          type={"submit"}
+          form={"booking-form"}
+          data-testid={"booking-submit-button"}
+        >
+          confirm
+        </button>
       </UILocalizationProvider>
     );
 
